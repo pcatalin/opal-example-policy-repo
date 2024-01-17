@@ -8,7 +8,7 @@
       }
     },
     "userWithIdZero":{
-      "id": 0,
+      "id": "0",
       "roles": ["none"],
       "location": {
         "country": "US",
@@ -16,7 +16,7 @@
       }
     },
     "catalin": {
-      "id": 1,
+      "id": "1",
       "roles": ["customer"],
       "location": {
         "country": "US",
