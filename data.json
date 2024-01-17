@@ -8,7 +8,7 @@
       }
     },
     "catalin": {
-      "roles": ["admin"],
+      "roles": ["customer"],
       "location": {
         "country": "US",
         "ip": "8.8.8.8"
