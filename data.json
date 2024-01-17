@@ -48,19 +48,22 @@
       {
         "action": "read",
         "type": "dog",
-        "boolean-test": true
+        "boolean-test": "true"
       },
       {
         "action": "read",
-        "type": "cat"
+        "type": "cat",
+        "boolean-test": "false"
       },
       {
         "action": "adopt",
-        "type": "dog"
+        "type": "dog",
+        "boolean-test": "true"
       },
       {
         "action": "adopt",
-        "type": "cat"
+        "type": "cat",
+        "boolean-test": "true"
       }
     ],
     "employee": [
