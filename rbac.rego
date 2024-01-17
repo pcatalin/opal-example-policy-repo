@@ -46,10 +46,14 @@ allow {
 # Allow the action if the user is granted permission to perform the action.
 allow {
 	# Find permissions for the user.
-	some permission, id
-	user_is_granted[permission, id]
+	some permission
+	user_is_granted[permission]
 
-	input.id == id
+	# Find user by name
+	some user 
+	find_user[user]
+	# Check User Data
+	input.id == user.id
 
 	# Check if the permission permits the action.
 	input.action == permission.action
@@ -91,14 +95,16 @@ user_is_guest {
 
 # user_is_granted is a set of permissions for the user identified in the request.
 # The `permission` will be contained if the set `user_is_granted` for every...
-user_is_granted[permission, id] {
+user_is_granted[permission] {
 	some i, j
-
-	id := data.users[input.id].id
 
 	# `role` assigned an element of the user_roles for this user...
 	role := data.users[input.user].roles[i]
 
 	# `permission` assigned a single permission from the permissions list for 'role'...
 	permission := data.role_permissions[role][j]
+}
+
+find_user[userData]{
+	user := data.users[input.user]
 }
