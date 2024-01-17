@@ -47,7 +47,8 @@
     "customer": [
       {
         "action": "read",
-        "type": "dog"
+        "type": "dog",
+        "boolean-test": true
       },
       {
         "action": "read",
