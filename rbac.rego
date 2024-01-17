@@ -30,9 +30,9 @@ allow {
 }
 
 # Allow user with id equal to 0 to do anything
-allow {
-	test_id_is_0
-}
+#allow {
+#	test_id_is_0
+#}
 
 # Allow bob to do anything
 #allow {
@@ -105,8 +105,8 @@ user_is_granted[permission] {
 	permission := data.role_permissions[role][j]
 }
 
-test_id_is_0 {
-	some i
-
-	data.users[i].id == "0"
-}
+#test_id_is_0 {
+#	some i
+#
+#	data.users[i].id == "0"
+#}
