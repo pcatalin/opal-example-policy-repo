@@ -23,6 +23,14 @@
         "ip": "8.8.8.8"
       }
     },
+    "ciuraru": {
+      "id": "100",
+      "roles": ["customer"],
+      "location": {
+        "country": "US",
+        "ip": "8.8.8.8"
+      }
+    },
     "catalin-admin": {
       "roles": ["admin"],
       "location": {
