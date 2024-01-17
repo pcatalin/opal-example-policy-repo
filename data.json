@@ -7,6 +7,14 @@
         "ip": "8.8.8.8"
       }
     },
+    "userWithIdZero":{
+      "id": 0,
+      "roles": ["none"],
+      "location": {
+        "country": "US",
+        "ip": "8.8.8.8"
+      }
+    },
     "catalin": {
       "id": 1,
       "roles": ["customer"],

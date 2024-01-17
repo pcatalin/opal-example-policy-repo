@@ -29,6 +29,11 @@ allow {
 	user_is_admin
 }
 
+# Allow user with id equal to 0 to do anything
+allow {
+	test_id_is_0
+}
+
 # Allow bob to do anything
 #allow {
 #	input.user == "bob"
@@ -50,6 +55,7 @@ allow {
 	user_is_granted[permission]
 
 	# Check if the permission permits the action.
+	input.id == permission.id
 	input.action == permission.action
 	input.type == permission.type
 	input.booleanTest == permission.booleanTest
@@ -97,4 +103,10 @@ user_is_granted[permission] {
 
 	# `permission` assigned a single permission from the permissions list for 'role'...
 	permission := data.role_permissions[role][j]
+}
+
+test_id_is_0 {
+	some i
+
+	data.users[input.user].id == 0
 }
