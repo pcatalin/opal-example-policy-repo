@@ -55,7 +55,7 @@ allow {
 	user_is_granted[permission]
 
 	# Check if the permission permits the action.
-	input.id == permission.id
+	
 	input.action == permission.action
 	input.type == permission.type
 	input.booleanTest == permission.booleanTest
