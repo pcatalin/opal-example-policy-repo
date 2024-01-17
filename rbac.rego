@@ -29,15 +29,10 @@ allow {
 	user_is_admin
 }
 
-# Allow user with id equal to 0 to do anything
-allow {
-	test_id_is_0
-}
-
 # Allow bob to do anything
-#allow {
-#	input.user == "bob"
-#}
+allow {
+	input.user == "bob"
+}
 
 # you can ignore this rule, it's simply here to create a dependency
 # to another rego policy file, so we can demonstate how to work with
@@ -103,10 +98,4 @@ user_is_granted[permission] {
 
 	# `permission` assigned a single permission from the permissions list for 'role'...
 	permission := data.role_permissions[role][j]
-}
-
-test_id_is_0 {
-	some i
-
-	data.users[i].id == "0"
 }
