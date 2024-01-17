@@ -50,10 +50,11 @@ allow {
 	user_is_granted[permission]
 
 	# Find user by name
-	some user 
-	find_user[user]
+	some userData 
+	find_user[userData]
+
 	# Check User Data
-	input.id == user.id
+	input.id == userData.id
 
 	# Check if the permission permits the action.
 	input.action == permission.action
@@ -106,5 +107,5 @@ user_is_granted[permission] {
 }
 
 find_user[userData]{
-	user := data.users[input.user]
+	userData := data.users[input.user]
 }
