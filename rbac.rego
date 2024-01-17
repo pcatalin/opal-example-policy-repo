@@ -52,7 +52,7 @@ allow {
 	# Check if the permission permits the action.
 	input.action == permission.action
 	input.type == permission.type
-	input.boolean-test == permission.boolean-test
+	input.booleanTest == permission.booleanTest
 
 	# unless user location is outside US
 	country := data.users[input.user].location.country
