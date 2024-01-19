@@ -7,6 +7,12 @@
         "ip": "8.8.8.8"
       }
     },
+    "Jetix": {
+      "location": {
+        "country": "US",
+        "ip": "8.8.8.8"
+      }
+    },
     "userWithIdZero":{
       "id": "0",
       "roles": ["none"],
