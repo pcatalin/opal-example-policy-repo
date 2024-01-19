@@ -13,7 +13,7 @@
         "ip": "8.8.8.8"
       }
     },
-    "userWithIdZero":{
+    "NewUser":{
       "id": "0",
       "roles": ["none"],
       "location": {
