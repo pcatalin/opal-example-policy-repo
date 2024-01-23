@@ -106,6 +106,6 @@ user_is_granted[permission] {
 	permission := data.role_permissions[role][j]
 }
 
-find_user[userData, test]{
+find_user[userData]{
 	userData := data.users[input.user]
 }
