@@ -30,7 +30,7 @@
       "id": "1",
       "roles": ["customer"],
       "location": {
-        "country": "UK",
+        "country": "US",
         "ip": "8.8.8.8"
       }
     },
