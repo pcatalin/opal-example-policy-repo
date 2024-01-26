@@ -29,6 +29,10 @@ allow {
 	user_is_admin
 }
 
+allow {
+	is_city1
+}
+
 # Allow bob to do anything
 allow {
 	input.user == "bob"
@@ -73,6 +77,13 @@ user_is_admin {
 
 	# "admin" is the `i`-th element in the user->role mappings for the identified user.
 	data.users[input.user].roles[i] == "admin"
+}
+
+is_city1 {
+	# for some `i`...
+	some i
+
+	data.cities[input.city_name] == "City 1"
 }
 
 # user_is_viewer is true if...
