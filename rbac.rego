@@ -82,7 +82,7 @@ user_is_admin {
 
 is_city1[city] {
 	# for some `i`...
-	some i, city
+	some i
 
 	city := data.cities[i].city_name == input.city
 }
