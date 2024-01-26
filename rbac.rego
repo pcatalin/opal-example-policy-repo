@@ -26,10 +26,6 @@ default allow = false
 
 # Allow admins to do anything
 allow {
-	user_is_admin
-}
-
-allow {
 	is_city1
 }
 
