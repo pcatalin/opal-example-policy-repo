@@ -83,7 +83,7 @@ is_city1 {
 	# for some `i`...
 	some i
 
-	data.cities[input.city_name] == "City 1"
+	data.cities[i].city_name == "City 1"
 }
 
 # user_is_viewer is true if...
