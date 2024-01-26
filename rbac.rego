@@ -30,8 +30,7 @@ allow {
 }
 
 allow {
-	some city
-	is_city1[city].city_name == "City 1"
+	is_city1
 }
 
 # Allow bob to do anything
@@ -80,11 +79,11 @@ user_is_admin {
 	data.users[input.user].roles[i] == "admin"
 }
 
-is_city1[city] {
+is_city1 {
 	# for some `i`...
 	some i
 
-	city := data.cities[i].city_name == input.city
+	data.cities[i].city_name == input.city
 }
 
 # user_is_viewer is true if...
