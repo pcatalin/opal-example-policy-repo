@@ -26,7 +26,12 @@ default allow = false
 
 # Allow admins to do anything
 allow {
-	is_city1
+	user_is_admin
+}
+
+allow {
+	some city
+	is_city1[city].city_name == "City 1"
 }
 
 # Allow bob to do anything
@@ -75,11 +80,11 @@ user_is_admin {
 	data.users[input.user].roles[i] == "admin"
 }
 
-is_city1 {
+is_city1[city] {
 	# for some `i`...
-	some i
+	some i, city
 
-	data.cities[i].city_name == "City 1"
+	city := data.cities[i].city_name == input.city
 }
 
 # user_is_viewer is true if...
