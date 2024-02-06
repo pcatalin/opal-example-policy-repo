@@ -63,8 +63,8 @@ allow {
 	# Check if the permission permits the action.
 
 	some act in permission.action
-	some i
-	act == input.action[i]
+	some i in input.action
+	act == i
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
