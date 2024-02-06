@@ -32,57 +32,53 @@
   "role_permissions": {
     "customer": [
       {
-        "action": "read",
+        "action": ["read", "write", "adopt"],
         "type": "dog"
       },
       {
-        "action": "read",
+        "action": ["read"],
         "type": "cat"
       },
       {
-        "action": "adopt",
-        "type": "dog"
-      },
-      {
-        "action": "adopt",
+        "action": ["adopt"],
         "type": "cat"
       }
     ],
     "employee": [
       {
-        "action": "read",
+        "action": ["read"],
         "type": "dog"
       },
       {
-        "action": "read",
+        "action": ["read"],
         "type": "cat"
       },
       {
-        "action": "update",
+        "action": ["update"],
         "type": "dog"
       },
       {
-        "action": "update",
+        "action": ["update"],
         "type": "cat"
       }
     ],
     "billing": [
       {
-        "action": "read",
+        "action": ["read"],
         "type": "finance"
       },
       {
-        "action": "update",
+        "action": ["update"],
         "type": "finance"
       }
     ],
     "guest": [
      {
-       "action": "read",
+       "action": ["read"],
        "type": "cat"
      },
      {
-       "action": "read",
+       "action": ["read"],
        "type": "finance"
      }
     ]
