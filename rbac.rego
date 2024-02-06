@@ -17,6 +17,7 @@
 #	* Rego comparison to other systems: https://www.openpolicyagent.org/docs/latest/comparison-to-other-systems/
 #	* Rego Iteration: https://www.openpolicyagent.org/docs/latest/#iteration
 
+import rego.v1
 package app.rbac
 import future.keywords.in
 import future.keywords.if
@@ -63,22 +64,17 @@ allow {
 	#input.id == userData.id
 	# Check if the permission permits the action.
 
-	some action in actions
-	input.action == action
+	some i, j
+	inputAction := input.action[i]
+	inputAction == permission.action[j]
 
+	#input.action == permission.action
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
 	# unless user location is outside US
 	country := data.users[input.user].location.country
 	country == "US"
-}
-
-actions contains a if {
-	some permission
-	user_is_granted[permission]
-
-	a := permission.action
 }
 
 # user_is_admin is true if...
