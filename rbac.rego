@@ -64,7 +64,7 @@ allow {
 
 	some action in actions
 	input.action == action
-	
+
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
@@ -73,11 +73,11 @@ allow {
 	country == "US"
 }
 
-actions contains action if {
+actions contains a if {
 	some permission
 	user_is_granted[permission]
 
-	action := permission.action
+	a := permission.action
 }
 
 # user_is_admin is true if...
