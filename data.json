@@ -36,11 +36,7 @@
         "type": "dog"
       },
       {
-        "action": ["read"],
-        "type": "cat"
-      },
-      {
-        "action": ["adopt"],
+        "action": ["read", "adopt"],
         "type": "cat"
       }
     ],
