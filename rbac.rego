@@ -60,15 +60,26 @@ allow {
 	# Check User Data
 	#input.id == userData.id
 
-	some i, j
+	some i, j, action
 	# Check if the permission permits the action.
-	input.action[i] == permission.action[j]
+
+	get_action[action]
+	input.action[i] == action
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
 	# unless user location is outside US
 	country := data.users[input.user].location.country
 	country == "US"
+}
+
+get_action[action] {
+	some i, j, k, role, permission
+
+ 	role := data.users[input.user].roles[i]
+	permission := data.role_permissions[role][j]
+
+	action := permission.action[k]
 }
 
 # user_is_admin is true if...
