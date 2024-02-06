@@ -60,7 +60,7 @@ allow {
 	# Check User Data
 	#input.id == userData.id
 
-	some i, j, action
+	some i, action
 	# Check if the permission permits the action.
 
 	get_action[action]
