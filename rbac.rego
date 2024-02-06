@@ -62,9 +62,9 @@ allow {
 	#input.id == userData.id
 	# Check if the permission permits the action.
 
-	some action in permission.action
-
-	input.action == action
+	some act in permission.action
+	some i
+	act == input.action[i]
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
@@ -72,6 +72,8 @@ allow {
 	country := data.users[input.user].location.country
 	country == "US"
 }
+
+
 
 # user_is_admin is true if...
 user_is_admin {
