@@ -73,15 +73,6 @@ allow {
 	country == "US"
 }
 
-has_actions contains action if {
-	some i, j
-
- 	role := data.users[input.user].roles[i]
-	permission := data.role_permissions[role][j]
-
-	some action in permission.action
-}
-
 # user_is_admin is true if...
 user_is_admin {
 	# for some `i`...
