@@ -60,11 +60,11 @@ allow {
 	# Check User Data
 	#input.id == userData.id
 
-	some i, action
+	some i, j, action
 	# Check if the permission permits the action.
 
 	get_action[action]
-	input.action[i] == action
+	input.action[i] == action[j]
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
