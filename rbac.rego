@@ -58,12 +58,12 @@ allow {
 	find_user[userData]
 
 	# Check User Data
-	input.id == userData.id
+	#input.id == userData.id
 
 	# Check if the permission permits the action.
 	input.action == permission.action
 	input.type == permission.type
-	input.booleanTest == permission.booleanTest
+	#input.booleanTest == permission.booleanTest
 
 	# unless user location is outside US
 	country := data.users[input.user].location.country
