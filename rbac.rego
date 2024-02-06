@@ -74,7 +74,7 @@ allow {
 }
 
 get_action[action] {
-	some i, j, k, role, permission
+	some i, j, k
 
  	role := data.users[input.user].roles[i]
 	permission := data.role_permissions[role][j]
