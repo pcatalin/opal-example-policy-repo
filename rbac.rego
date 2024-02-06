@@ -61,7 +61,7 @@ allow {
 	#input.id == userData.id
 	# Check if the permission permits the action.
 
-	some i;
+	some i
 	some action in has_actions
 
 	input.action[i] == action
