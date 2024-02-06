@@ -18,6 +18,7 @@
 #	* Rego Iteration: https://www.openpolicyagent.org/docs/latest/#iteration
 
 package app.rbac
+import future.keywords.in
 
 # import data.utils
 
