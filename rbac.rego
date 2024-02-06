@@ -62,9 +62,9 @@ allow {
 	#input.id == userData.id
 	# Check if the permission permits the action.
 
-	some act in permission.action
-	some i in input.action
-	act == i
+	some action in actions
+	input.action == action
+	
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
@@ -73,7 +73,12 @@ allow {
 	country == "US"
 }
 
+actions contains action if {
+	some permission
+	user_is_granted[permission]
 
+	action := permission.action
+}
 
 # user_is_admin is true if...
 user_is_admin {
