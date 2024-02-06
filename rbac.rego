@@ -17,7 +17,6 @@
 #	* Rego comparison to other systems: https://www.openpolicyagent.org/docs/latest/comparison-to-other-systems/
 #	* Rego Iteration: https://www.openpolicyagent.org/docs/latest/#iteration
 
-import rego.v1
 package app.rbac
 import future.keywords.in
 import future.keywords.if
