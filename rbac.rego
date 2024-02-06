@@ -63,8 +63,8 @@ allow {
 	some i, j, action
 	# Check if the permission permits the action.
 
-	get_action[action]
-	input.action[i] == action[j]
+	#get_action[action]
+	input.action[i] == permission.action[j]
 	input.type == permission.type
 	#input.booleanTest == permission.booleanTest
 
@@ -74,12 +74,12 @@ allow {
 }
 
 get_action[action] {
-	some i, j, k
+	some i, j
 
  	role := data.users[input.user].roles[i]
 	permission := data.role_permissions[role][j]
 
-	action := permission.action[k]
+	action := permission.action
 }
 
 # user_is_admin is true if...
