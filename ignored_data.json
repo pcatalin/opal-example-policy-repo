@@ -1,82 +1,132 @@
 {
-  "users": {
-    "alice": {
-      "roles": ["admin"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "bob": {
-      "roles": ["employee", "billing"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-     "sunil": {
-      "roles": ["guest"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    },
-    "eve": {
-      "roles": ["customer"],
-      "location": {
-        "country": "US",
-        "ip": "8.8.8.8"
-      }
-    }
-  },
-  "role_permissions": {
-    "customer": [
+  "tenants": [
       {
-        "action": ["read", "write", "adopt"],
-        "type": "dog"
+          "name": "clarity",
+          "roles": [
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "Read",
+                              "Write",
+                              "Delete"
+                          ],
+                          "name": "Report"
+                      },
+                      {
+                          "actions": [
+                              "play",
+                              "shoot"
+                          ],
+                          "name": "Player"
+                      }
+                  ],
+                  "name": "Admin"
+              },
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "Read",
+                              "Write",
+                              "Delete"
+                          ],
+                          "name": "Swimmer 2"
+                      },
+                      {
+                          "actions": [
+                              "play",
+                              "shoot"
+                          ],
+                          "name": "Enemy"
+                      }
+                  ],
+                  "name": "Clarity Admin"
+              },
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "ffffffffffffff",
+                              "ddddddddddd"
+                          ],
+                          "name": "Group 1"
+                      },
+                      {
+                          "actions": [
+                              "dasdsasaddsagsdfs",
+                              "jhjhjjhhjhjhjhj"
+                          ],
+                          "name": "Group 3"
+                      }
+                  ],
+                  "name": "Test Role"
+              }
+          ]
       },
       {
-        "action": ["read", "adopt"],
-        "type": "cat"
+          "name": "clarity 2",
+          "roles": [
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "Read",
+                              "Write",
+                              "Delete"
+                          ],
+                          "name": "Report"
+                      },
+                      {
+                          "actions": [
+                              "play",
+                              "shoot"
+                          ],
+                          "name": "Player"
+                      }
+                  ],
+                  "name": "Admin"
+              },
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "Read",
+                              "Write",
+                              "Delete"
+                          ],
+                          "name": "Swimmer 2"
+                      },
+                      {
+                          "actions": [
+                              "play",
+                              "shoot"
+                          ],
+                          "name": "Enemy"
+                      }
+                  ],
+                  "name": "Clarity Admin"
+              },
+              {
+                  "groups": [
+                      {
+                          "actions": [
+                              "ffffffffffffff",
+                              "ddddddddddd"
+                          ],
+                          "name": "Group 1"
+                      },
+                      {
+                          "actions": [
+                              "dasdsasaddsagsdfs",
+                              "jhjhjjhhjhjhjhj"
+                          ],
+                          "name": "Group 3"
+                      }
+                  ],
+                  "name": "Test Role"
+              }
+          ]
       }
-    ],
-    "employee": [
-      {
-        "action": ["read"],
-        "type": "dog"
-      },
-      {
-        "action": ["read"],
-        "type": "cat"
-      },
-      {
-        "action": ["update"],
-        "type": "dog"
-      },
-      {
-        "action": ["update"],
-        "type": "cat"
-      }
-    ],
-    "billing": [
-      {
-        "action": ["read"],
-        "type": "finance"
-      },
-      {
-        "action": ["update"],
-        "type": "finance"
-      }
-    ],
-    "guest": [
-     {
-       "action": ["read"],
-       "type": "cat"
-     },
-     {
-       "action": ["read"],
-       "type": "finance"
-     }
-    ]
-  }
+  ]
 }
